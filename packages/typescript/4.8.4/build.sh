@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+
 source ../../node/16.18.0/build.sh
 
 source ./environment

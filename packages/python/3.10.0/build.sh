@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 PREFIX=$(realpath $(dirname $0))
 
 mkdir -p build
