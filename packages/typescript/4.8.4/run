@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Required to make imports work
+echo '{ "type": "module" }' > package.json
+
+# Required to make imports work + strict type checking
+echo '{
+	"ts-node": {
+		"esm": true,
+		"experimentalSpecifierResolution": "node"
+	},
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["es2017", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"strict": true,
+	}
+}' > tsconfig.json
+
+
+filename=$1
+shift
+
+ts-node --project tsconfig.json $filename "$@"

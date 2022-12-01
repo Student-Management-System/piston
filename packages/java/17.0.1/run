@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Put instructions to run the runtime
+filename=$1
+# Remove .java from filename
+classname=${filename%.java}
+
+shift
+javac $filename && java $classname "$@"

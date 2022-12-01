@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 PREFIX=$(realpath $(dirname $0))
 
 mkdir -p build
@@ -18,4 +18,4 @@ cd ..
 
 rm -rf build
 
-bin/pip3 install numpy scipy pandas pycrypto whoosh bcrypt passlib sympy
+bin/pip3 install numpy pandas
