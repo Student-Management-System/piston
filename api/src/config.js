@@ -105,7 +105,7 @@ const options = {
     repo_url: {
         desc: 'URL of repo index',
         default:
-            'https://github.com/Student-Management-System/piston/releases/download/pkgs/index',
+            'https://github.com/e-Learning-by-SSE/infrastructure-piston-service/releases/download/pkgs/index',
         validators: [],
     },
     max_concurrent_jobs: {

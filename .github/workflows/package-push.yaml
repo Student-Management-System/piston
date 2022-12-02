@@ -51,11 +51,11 @@ jobs:
         needs: build-pkg
         steps:
             - name: 'Download all release assets'
-              run: curl -s https://api.github.com/repos/Student-Management-System/piston/releases/latest | jq '.assets[].browser_download_url' -r | xargs -L 1 curl -sLO
+              run: curl -s https://api.github.com/repos/e-Learning-by-SSE/infrastructure-piston-service/releases/latest | jq '.assets[].browser_download_url' -r | xargs -L 1 curl -sLO
             - name: 'Generate index file'
               run: |
                   echo "" > index
-                  BASEURL=https://github.com/Student-Management-System/piston/releases/download/pkgs/
+                  BASEURL=https://github.com/e-Learning-by-SSE/infrastructure-piston-service/releases/download/pkgs/
                   for pkg in *.pkg.tar.gz
                   do
                     PKGFILE=$(basename $pkg)
